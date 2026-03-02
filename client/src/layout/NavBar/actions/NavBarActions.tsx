@@ -3,6 +3,7 @@ import { Avatar, Box, Button, IconButton, Menu, MenuItem, Tooltip } from '@mui/m
 import { DarkModeToggle } from '../../../features/dark-mode/DarkModeToggle';
 import React from 'react';
 import SearchIcon from '@mui/icons-material/Search';
+import AddIcon from '@mui/icons-material/Add';
 import { useAuth } from '../../../auth/hooks/useAuth';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
@@ -33,6 +34,7 @@ export const NavBarActions: React.FC = () => {
   return (
     <Box sx={{ flexGrow: 0, display: 'flex', alignItems: 'center', gap: 1 }}>
       <DarkModeToggle />
+      <Button color="inherit" startIcon={<AddIcon />} onClick={() => navigate('/trainee/new')}>ADD TRAINEE</Button>
       <IconButton onClick={() => navigate('/search')} size="large" aria-label="search" color="inherit">
         <SearchIcon />
       </IconButton>
